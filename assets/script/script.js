@@ -99,6 +99,7 @@ var getWeather =function(data){
         getCurrentUVIndex();
         
         for(i=1;i<=5;i++){
+            
             var futureTimeStamp=info.daily[i].dt;
             var futuretimeStamformated=moment.unix(futureTimeStamp).format('L');
             var futureIcon=info.daily[i].weather[0].icon;
