@@ -18,17 +18,20 @@
                     <input id="zipCode" class="form-control" type="text" placeholder="ENTER ZIP CODE" value=""></input>
                     <p class="font-weight-light">Put in zip code for US city. When search for cities outside of the US, please use the format: Zip/post code and country code divided by comma. Please use ISO 3166 country codes. For example, for London,UK, please type in: E14,GB </p>
                     <button type="submit" id="searchBtn" class="btn btn-primary  btn-block mt-2">Search</button>
+                    <button type="submit" id="clearBtn" class="btn btn-primary  btn-block mt-2">Clear Previous Searches</button>
                 </div>
-                <div class=" col-md-9 col-sm-12  ">
+                <div id="weatherInfoContent" class=" col-md-9 col-sm-12  ">
                     <div id="current-weather" class="border rounded">
-                        <span id="cityHeader"></span></br>
+                        <span id="cityHeader"></span>
+                        <img id="icon" src="" width="30" height="30"></br>
                         <span id="temp"></span></br>
                         <span id="wind"></span></br>
                         <span id="humidity"></span></br>
                         <span id="uv-index"></span></br>
                     </div>
-                    <div id="five-day-forecast" class="mt-5 row">
-
+                    <div>Five Days Forecast</div>
+                    <div id="fiveDayForecast" class="mt-2 row" > 
+                            <!--
                         <div class="card col-12 col-sm m-3">
                             <div class="card-header">
                               Featured
@@ -83,6 +86,7 @@
                               
                             </div>
                         </div>
+                        -->
                     </div>
                 </div>
             </div>
