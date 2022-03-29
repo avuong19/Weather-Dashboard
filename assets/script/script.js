@@ -180,5 +180,5 @@ var getWeather =function(data){
 
 
 $('#searchBtn').on("click",searchLocation);
-$('.previousSearch').on("click",searchLocation);
+
 
