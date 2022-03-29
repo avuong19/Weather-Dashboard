@@ -24,7 +24,7 @@ var searchLocation=function(){
 
    
     // format the github api url
-  var geoCodingUrl = "http://api.openweathermap.org/geo/1.0/zip?zip="+zipCodeEl+"&appid="+ apiID;
+  var geoCodingUrl = "https://api.openweathermap.org/geo/1.0/zip?zip="+zipCodeEl+"&appid="+ apiID;
 
   // make a get request to url
   fetch(geoCodingUrl)
@@ -73,7 +73,7 @@ var getWeather =function(data){
         var timeStamp=info.current.dt;
         var timeStamformated=moment.unix(timeStamp).format('L');
         var icon=info.current.weather[0].icon;
-        var iconApi="http://openweathermap.org/img/wn/"+icon+"@2x.png"
+        var iconApi="https://openweathermap.org/img/wn/"+icon+"@2x.png"
         document.getElementById("icon").setAttribute("src",iconApi);
         console.log(iconApi);
 
