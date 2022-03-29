@@ -13,12 +13,12 @@
         <header class="sticky-top text-center p-3 mb-2 bg-info text-white font-weight-bold ">WEATHER DASHBOARD</header>
         <div id="content" class="container">
             <div class="row">
-                <div class="col-md-3 col-sm-12 pl-5 ">
+                <div id="firstColumn" class="col-md-3 col-sm-12 pl-5 ">
                     <label class="font-weight-bold">Search for a City</label>
-                    <input id="zipCode" class="form-control" type="text" placeholder="ENTER ZIP CODE" value=""></input>
+                    <input id="zipCode" class="form-control zipCode" type="text" placeholder="ENTER ZIP CODE" value=""></input>
                     <p class="font-weight-light">Put in zip code for US city. When search for cities outside of the US, please use the format: Zip/post code and country code divided by comma. Please use ISO 3166 country codes. For example, for London,UK, please type in: E14,GB </p>
                     <button type="submit" id="searchBtn" class="btn btn-primary  btn-block mt-2">Search</button>
-                    <button type="submit" id="clearBtn" class="btn btn-primary  btn-block mt-2">Clear Previous Searches</button>
+                    
                 </div>
                 <div id="weatherInfoContent" class=" col-md-9 col-sm-12  ">
                     <div id="current-weather" class="border rounded">
@@ -31,21 +31,8 @@
                     </div>
                     <div>Five Days Forecast</div>
                     <div id="fiveDayForecast" class="mt-2 row" > 
-                            <!--
-                        <div class="card col-12 col-sm m-3">
-                            <div class="card-header">
-                              Featured
-                            </div>
-                            <div class="card-body">
-                              <h5 class="card-title">Special title treatment</h5>
-                              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                              
-                            </div>
-                        </div>
-
-                        
-                        </div>
-                        -->
+                            
+                
                     </div>
                 </div>
             </div>

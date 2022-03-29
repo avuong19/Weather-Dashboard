@@ -1,13 +1,28 @@
 var apiID="e83c00cd830025a2a9608537f34f4eb2";
 var currentDay=moment().format('ll');
 
-var zipCodeEl=$('#zipCode').val();
+var zipCodeEl=$('.zipCode').val();
+var firstColumnEl= document.querySelector("#firstColumn");
+
 
 
 
 var searchLocation=function(){
     
     var zipCodeEl=$('#zipCode').val();
+    localStorage.setItem('zip',zipCodeEl);
+    var displayPreviousSearches=function(){
+        var previouszip = localStorage.getItem('zip');
+        var previousSearchedZip=document.createElement("button");
+            previousSearchedZip.classList="btn btn-primary  btn-block mt-2 zipCode previousSearch";
+            previousSearchedZip.setAttribute=("type","submit");
+            firstColumnEl.appendChild(previousSearchedZip);
+            previousSearchedZip.textContent=previouszip;
+        
+    }
+    displayPreviousSearches();
+
+   
     // format the github api url
   var geoCodingUrl = "http://api.openweathermap.org/geo/1.0/zip?zip="+zipCodeEl+"&appid="+ apiID;
 
@@ -97,7 +112,7 @@ var getWeather =function(data){
             }
         }
         getCurrentUVIndex();
-        
+        var passFutureForeCast=function(){
         for(i=1;i<=5;i++){
             
             var futureTimeStamp=info.daily[i].dt;
@@ -155,11 +170,15 @@ var getWeather =function(data){
             futureUVI.innerHTML="UV Index: "+ info.daily[i].uvi;
             
         }
-
-
+    }
+    passFutureForeCast();
     }
 
 
 };
 
+
+
 $('#searchBtn').on("click",searchLocation);
+$('.previousSearch').on("click",searchLocation);
+
