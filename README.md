@@ -1,6 +1,8 @@
 # Weather-Dashboard
 ## Here is the link to my page:
 https://avuong19.github.io/Weather-Dashboard/
+## Here is the 1st look of my site:
+![web-pic](./assets/Capture.JPG)
 ## My objectives:
 GIVEN a weather dashboard with form inputs </br>
 WHEN I search for a city </br>
